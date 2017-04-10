@@ -15,8 +15,7 @@ public class SampleUI extends UI {
         VerticalLayout layout = new VerticalLayout();
         Label label = new Label("<strong>Hello</strong>", HTML);
         TextField field = new TextField("world!");
-        layout.addComponent(label);
-        layout.addComponent(field);
+        layout.addComponents(label, field);
         layout.setMargin(true);
         setContent(layout);
     }
