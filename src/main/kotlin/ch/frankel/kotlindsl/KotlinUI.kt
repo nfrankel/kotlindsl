@@ -29,4 +29,4 @@ fun VerticalLayout.label(label: String, init: Label.() -> Unit) = Label().apply(
 }
 
 fun VerticalLayout.html(label: String, init: Label.() -> Unit = {}) =
-        Label(label, HTML).apply(init)
+        label(label, init).apply { contentMode = HTML }
