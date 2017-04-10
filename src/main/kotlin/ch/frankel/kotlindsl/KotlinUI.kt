@@ -12,13 +12,9 @@ class KotlinUI : UI() {
     }
 }
 
-fun UI.verticalLayout(spacing: Boolean, margin: Boolean) {
+fun UI.verticalLayout(spacing: Boolean = false, margin: Boolean = false) {
     val verticalLayout = VerticalLayout()
     verticalLayout.isSpacing = spacing
     verticalLayout.margin = MarginInfo(margin)
     content = verticalLayout
 }
-
-fun UI.verticalLayout(spacing: Boolean) {}
-
-fun UI.verticalLayout() {}
