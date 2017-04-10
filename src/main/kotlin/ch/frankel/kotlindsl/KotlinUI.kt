@@ -8,7 +8,7 @@ class KotlinUI : UI() {
 
     override fun init(request: VaadinRequest) {
         theme = "valo"
-        verticalLayout()
+        verticalLayout(true)
     }
 }
 
