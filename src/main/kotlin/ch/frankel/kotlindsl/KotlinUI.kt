@@ -13,5 +13,5 @@ class KotlinUI : UI() {
 
 fun UI.verticalLayout() {
     val verticalLayout = VerticalLayout()
-    this.setContent(verticalLayout)
+    content = verticalLayout
 }
