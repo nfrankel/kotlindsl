@@ -1,6 +1,7 @@
 package ch.frankel.kotlindsl
 
 import com.vaadin.server.*
+import com.vaadin.shared.ui.*
 import com.vaadin.ui.*
 
 class KotlinUI : UI() {
@@ -11,7 +12,13 @@ class KotlinUI : UI() {
     }
 }
 
-fun UI.verticalLayout() {
+fun UI.verticalLayout(spacing: Boolean, margin: Boolean) {
     val verticalLayout = VerticalLayout()
+    verticalLayout.isSpacing = spacing
+    verticalLayout.margin = MarginInfo(margin)
     content = verticalLayout
 }
+
+fun UI.verticalLayout(spacing: Boolean) {}
+
+fun UI.verticalLayout() {}
