@@ -10,10 +10,7 @@ class KotlinUI : UI() {
     override fun init(request: VaadinRequest) {
         theme = "valo"
         verticalLayout(spacing = true) {
-            label {
-                value = "<strong>Hello</strong>"
-                contentMode = HTML
-            }
+            html("<strong>Hello</strong>")
         }
     }
 }
@@ -30,3 +27,6 @@ fun UI.verticalLayout(spacing: Boolean = false,
 fun VerticalLayout.label(label: String, init: Label.() -> Unit) = Label().apply(init).apply {
     this@label.addComponent(this)
 }
+
+fun VerticalLayout.html(label: String, init: Label.() -> Unit = {}) =
+        Label(label, HTML).apply(init)
